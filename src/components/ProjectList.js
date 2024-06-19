@@ -1,12 +1,13 @@
 import React from 'react';
-import './ProjectList.css';
+import '../styles/ProjectList.css';
 
 const ProjectList = () => {
-  const projects = [
-    { id: 1, title: 'Project 1', description: 'Description of Project 1' },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3' },
-  ];
+  // 프로젝트 목록을 나타내는 더미 데이터
+  const projects = Array.from({ length: 18 }, (_, i) => ({
+    id: i + 1,
+    title: `Project ${i + 1}`,
+    description: `Description of Project ${i + 1}`
+  }));
 
   return (
     <div className="project-list">

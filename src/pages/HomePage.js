@@ -1,12 +1,10 @@
 import React from 'react';
-import ProjectList from '../components/ProjectList';
-import './HomePage.css';
+import Carousel from '../components/Carousel';
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <h2>Projects</h2>
-      <ProjectList />
+      <Carousel />
     </div>
   );
 };
