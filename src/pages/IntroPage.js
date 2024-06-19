@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import '../styles/IntroPage.css';
 
 const productNames = ['Product A', 'Product B', 'Product C'];
-const viewerCounts = [100, 200, 300];
-
 const IntroPage = () => {
   const [productName, setProductName] = useState(productNames[0]);
-  const [viewerCount, setViewerCount] = useState(viewerCounts[0]);
+  const [viewerCount, setViewerCount] = useState(100);
 
   useEffect(() => {
     const nameInterval = setInterval(() => {
@@ -15,7 +13,7 @@ const IntroPage = () => {
     }, 2000);
 
     const countInterval = setInterval(() => {
-      setViewerCount(viewerCounts[Math.floor(Math.random() * viewerCounts.length)]);
+      setViewerCount(Math.floor(Math.random() * 901) + 100);
     }, 2000);
 
     return () => {

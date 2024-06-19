@@ -7,11 +7,13 @@ const Header = () => {
     <header className="header">
       <Link to="/" className="logo">Logo</Link>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/funding">Funding</Link>
-        <Link to="/preorder">Preorder</Link>
+        <div className="nav-left">
+          <Link to="/main">Home</Link>
+          <Link to="/funding">Funding</Link>
+          <Link to="/preorder">Preorder</Link>
+        </div>
         <input type="text" placeholder="Search..." className="search" />
-        <div className="nav-buttons">
+        <div className="nav-right">
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
           <Link to="/create">Create Project</Link>
