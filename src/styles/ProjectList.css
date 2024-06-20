@@ -12,17 +12,79 @@
   border-radius: 5px;
   width: calc(33% - 40px);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .project-card .project-image {
   width: 100%;
-  height: 150px;
+  height: 240px;
   background-color: #EFEFD0;
-  margin-bottom: 10px;
 }
 
-.project-card h2 {
-  margin-top: 0;
+.project-details {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.project-details h2 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.project-details p {
+  font-size: 0.875rem;
+  margin: 10px 0;
+}
+
+.funding-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.funding-bar {
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.funding-bar-inner {
+  background-color: #004E89;
+  height: 10px;
+  width: 0;
+}
+
+.funding-percentage {
+  font-size: 1.2rem;
+}
+
+.bookmark-button {
+  background: none;
+  border: none;
+  color: #004E89;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.bookmark-button.bookmarked {
+  color: orange;
+}
+
+@media (max-width: 1200px) {
+  .project-card {
+    width: calc(33.33% - 20px);
+  }
 }
 
 @media (max-width: 800px) {

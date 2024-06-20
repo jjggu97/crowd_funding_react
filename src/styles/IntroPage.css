@@ -2,6 +2,75 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.header .logo {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-left {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+.header .search {
+  margin: 0 auto;
+  padding: 5px;
+  flex-shrink: 1;
+}
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  text-align: center;
+}
+
+.intromsg h2 {
+  font-size: 2rem;
+=======
   height: 100vh;
   padding: 0 20px;
   }
@@ -12,10 +81,11 @@
   top: 25%;
   left: 38%;
   margin: -25px 0 0 -25px;
-  max-width: 100%;
+  max-width: 50%;
   }
   
   .intromsg h2 {
+>>>>>>> parent of 6dc7f96 (06/20)
   color: #004E89;
   }
   
