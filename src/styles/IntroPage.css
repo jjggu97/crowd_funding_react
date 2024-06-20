@@ -1,112 +1,183 @@
-.intro-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative;
+/* Background Animation */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #a7cbc5;
+    overflow: hidden;
+    z-index: -1; /* 배경을 뒤로 보내기 */
+}
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 22s linear infinite;
+}
+
+.background li:nth-child(1) {
+    left: 3%;
+    width: 202px;
+    height: 202px;
+    bottom: -202px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 16%;
+    width: 173px;
+    height: 173px;
+    bottom: -173px;
+    animation-delay: 4s;
+}
+.background li:nth-child(3) {
+    left: 83%;
+    width: 232px;
+    height: 232px;
+    bottom: -232px;
+    animation-delay: 3s;
+}
+.background li:nth-child(4) {
+    left: 25%;
+    width: 233px;
+    height: 233px;
+    bottom: -233px;
+    animation-delay: 5s;
+}
+.background li:nth-child(5) {
+    left: 61%;
+    width: 226px;
+    height: 226px;
+    bottom: -226px;
+    animation-delay: 2s;
+}
+.background li:nth-child(6) {
+    left: 73%;
+    width: 234px;
+    height: 234px;
+    bottom: -234px;
+    animation-delay: 22s;
+}
+
+/* Header */
+.header {
+    background-color: #004E89;
+    color: white;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1; /* 헤더를 위로 올리기 */
+    position: relative;
 }
 
 .header .logo {
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
 }
 
 .header nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .nav-left {
-  display: flex;
-  flex-grow: 1;
+    display: flex;
+    flex-grow: 1;
 }
 
 .nav-left a {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
 }
 
 .nav-left a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .header .search {
-  margin: 0 auto;
-  padding: 5px;
-  flex-shrink: 1;
+    margin: 0 auto;
+    padding: 5px;
+    flex-shrink: 1;
 }
 
 .nav-right {
-  display: flex;
-  margin-left: auto;
+    display: flex;
+    margin-left: auto;
 }
 
 .nav-right a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
 .nav-right a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+/* Intro Page */
 .intro-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .intromsg h2 {
-  font-size: 2rem;
-=======
-  height: 100vh;
-  padding: 0 20px;
-  }
-  
-  .intromsg {
-  font-size: 25px;
-  position: absolute;
-  top: 25%;
-  left: 38%;
-  margin: -25px 0 0 -25px;
-  max-width: 50%;
-  }
-  
-  .intromsg h2 {
->>>>>>> parent of 6dc7f96 (06/20)
-  color: #004E89;
-  }
-  
-  .intromsg h1 {
-  color: #FF6B35;
-  }
-  
-  .intromsg p {
-  color: #1A659E;
-  }
-  
-  .start-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 20px 40px;
-  background-color: #004E89;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  }
-  
-  .start-button
-  {
-  background-color: #1A659E;
-  }
+    font-size: 2rem;
+    color: #004E89;
+}
+
+.intromsg h1 {
+    font-size: 3rem;
+    color: tomato;
+}
+
+.intromsg p {
+    font-size: 1.5rem;
+    color: #004E89;
+}
+
+.start-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #004E89;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.start-button:hover {
+    background-color: #003366;
+}
