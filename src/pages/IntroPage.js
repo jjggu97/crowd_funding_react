@@ -52,7 +52,7 @@ const IntroPage = () => {
       <div className="intromsg">
         <h2>지금, 이 곳에서는</h2>
         <h1>{productName}</h1>
-        <p>{viewerCount} 명이 펀딩하고 있어요</p>
+        <p>{viewerCount} 명의 사람들이 펀딩하고 있어요</p>
         <Link to="/main" className="start-button">지금 시작하기</Link>
       </div>
     </div>

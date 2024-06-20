@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProjectSkeleton from './Skeleton'; // Skeleton 컴포넌트 import
+import ProjectSkeleton from './Skeleton';
 import '../styles/ProjectList.css';
 
 const ProjectList = () => {
@@ -13,7 +13,6 @@ const ProjectList = () => {
   }));
 
   useEffect(() => {
-    // 데이터 로드 후 로딩 상태 변경
     setLoading(false);
   }, []);
 
@@ -29,7 +28,7 @@ const ProjectList = () => {
         <div key={project.id} className="project-card">
           <div className="project-image">
             {loading ? (
-              <ProjectSkeleton /> // Skeleton 컴포넌트 사용
+              <ProjectSkeleton />
             ) : (
               <div className="loading-spinner"></div>
             )}
