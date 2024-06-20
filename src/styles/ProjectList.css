@@ -46,6 +46,7 @@
 }
 
 .project-details {
+  font-family: NanumGothic;
   padding: 10px;
   text-align: center;
   width: 100%;
@@ -73,10 +74,9 @@
 .funding-bar {
   background-color: #ddd;
   border-radius: 5px;
-  overflow: hidden;
   height: 10px;
-  width: 50%;
-  margin-right: 10px;
+  width: 60%;
+  margin-right: 50px;
 }
 
 .funding-bar-inner {
@@ -86,9 +86,11 @@
 }
 
 .funding-percentage {
+  font-family: NanumGothic;
   display: flex;
   align-items: center;
   font-size: 0.875rem;
+  margin-right: 15px;
 }
 
 .bookmark-button {
@@ -98,6 +100,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: 10px;
+  margin-bottom: 6px;
 }
 
 .bookmark-button.bookmarked {
