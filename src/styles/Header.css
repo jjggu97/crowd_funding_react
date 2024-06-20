@@ -1,13 +1,19 @@
+@font-face{
+  font-family: "NanumGothic";
+  src:url(/src/NanumGothic-Regular.ttf);
+}
+
 .header {
-  background-color: #004E89;
+  font-family: NanumGothic;
+  background-color: tomato;
   color: white;
-  padding: 10px 100px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
+  max-height: 30px;
   margin: 0 auto;
-  
 }
 
 .header .logo {
@@ -15,7 +21,7 @@
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .header nav {
@@ -40,6 +46,7 @@
 }
 
 .header .search {
+  font-family: NanumGothic;
   margin: 0 auto;
   padding: 5px;
   flex-shrink: 1;

@@ -1,4 +1,8 @@
-/* Background Animation */
+@font-face{
+    font-family: "NanumGothic";
+    src:url(/src/NanumGothic-Regular.ttf);
+}
+
 @keyframes animate {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -20,9 +24,9 @@
     left: 0;
     margin: 0;
     padding: 0;
-    background: #a7cbc5;
+    background: lightyellow;
     overflow: hidden;
-    z-index: -1; /* 배경을 뒤로 보내기 */
+    z-index: -1; 
 }
 
 .background li {
@@ -31,8 +35,8 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    animation: animate 22s linear infinite;
+    background: rgba(247,171,241,0.2);
+    animation: animate 10s linear infinite;
 }
 
 .background li:nth-child(1) {
@@ -78,78 +82,17 @@
     animation-delay: 22s;
 }
 
-/* Header */
-.header {
-    background-color: #004E89;
-    color: white;
-    padding: 10px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1; /* 헤더를 위로 올리기 */
-    position: relative;
-}
-
-.header .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 30px;
-}
-
-.header nav {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.nav-left {
-    display: flex;
-    flex-grow: 1;
-}
-
-.nav-left a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-.nav-left a:hover {
-    text-decoration: underline;
-}
-
-.header .search {
-    margin: 0 auto;
-    padding: 5px;
-    flex-shrink: 1;
-}
-
-.nav-right {
-    display: flex;
-    margin-left: auto;
-}
-
-.nav-right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.nav-right a:hover {
-    text-decoration: underline;
-}
-
-/* Intro Page */
 .intro-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     text-align: center;
+}
+
+.intromsg{
+    font-family: NanumGothic;
 }
 
 .intromsg h2 {
@@ -179,5 +122,5 @@
 }
 
 .start-button:hover {
-    background-color: #003366;
+    background-color: tomato;
 }

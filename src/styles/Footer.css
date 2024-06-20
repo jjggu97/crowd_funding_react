@@ -1,8 +1,10 @@
 .footer {
-  background-color: #004E89;
+  font-family: NanumGothic;
+  background-color: tomato;
   color: white;
+  display: flex;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 10px;
   max-width: 1200px;
   margin: 0 auto;
 }

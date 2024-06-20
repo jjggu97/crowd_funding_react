@@ -4,7 +4,7 @@ import '../styles/ProjectList.css';
 const ProjectList = () => {
   const [bookmarked, setBookmarked] = useState(Array(18).fill(false));
 
-  const projects = Array.from({ length: 18 }, (_, i) => ({
+  const projects = Array.from({ length: 100 }, (_, i) => ({
     id: i + 1,
     title: `프로젝트 ${i + 1}`,
     description: `설명 ${i + 1}`,
