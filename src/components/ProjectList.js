@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/ProjectList.css';
 
-const ProjectCard = ({ project, isLoading, toggleBookmark, isBookmarked }) => {
+const ProjectCard = ({ project }) => {
   return (
     <div className="project-card">
-      <div className={`project-image ${isLoading ? 'loading' : ''}`}>
-        {isLoading ? <div className="loading-spinner"></div> : null}
-      </div>
+      <div className="project-image"></div>
       <div className="project-details">
-        <h2>{isLoading ? <div className="skeleton-loader"></div> : project.title}</h2>
-        <p>{isLoading ? <div className="skeleton-loader"></div> : project.description}</p>
+        <h2>{project.title}</h2>
+        <p>{project.description}</p>
         <div className="funding-info">
-          <div className={`funding-bar ${isLoading ? 'loading' : ''}`}>
+          <div className="funding-bar">
             <div className="funding-bar-inner"></div>
           </div>
-          <div className="funding-percentage">
-            {isLoading ? <div className="skeleton-loader"></div> : '0%'}
-            <button
-              className={`bookmark-button ${isBookmarked ? 'bookmarked' : ''}`}
-              onClick={toggleBookmark}
-            >
-              {isBookmarked ? '★' : '☆'}
-            </button>
-          </div>
+          <div className="funding-percentage">0%</div>
+          <button className="bookmark-button">☆</button>
         </div>
       </div>
     </div>
@@ -30,14 +21,14 @@ const ProjectCard = ({ project, isLoading, toggleBookmark, isBookmarked }) => {
 };
 
 const ProjectList = () => {
-  const [bookmarked, setBookmarked] = useState(Array(100).fill(false)); // Assuming 100 projects
+  const [bookmarked, setBookmarked] = useState(Array(18).fill(false));
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        // Simulate a 2-second delay
+        // 임의의 지연 시간 추가
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
         const fetchedProjects = Array.from({ length: 100 }, (_, i) => ({
@@ -64,13 +55,7 @@ const ProjectList = () => {
   return (
     <div className="project-list">
       {projects.map((project, index) => (
-        <ProjectCard
-          key={project.id}
-          project={project}
-          isLoading={isLoading}
-          toggleBookmark={() => toggleBookmark(index)}
-          isBookmarked={bookmarked[index]}
-        />
+        <ProjectCard key={project.id} project={project} />
       ))}
     </div>
   );

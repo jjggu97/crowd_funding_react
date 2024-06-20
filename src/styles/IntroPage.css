@@ -69,6 +69,7 @@
 
 .intromsg h2 {
   font-size: 2rem;
+=======
   height: 100vh;
   padding: 0 20px;
   }
@@ -83,6 +84,7 @@
   }
   
   .intromsg h2 {
+>>>>>>> parent of 6dc7f96 (06/20)
   color: #004E89;
   }
   
