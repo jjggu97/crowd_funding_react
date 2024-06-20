@@ -3,11 +3,7 @@ import '../styles/Carousel.css';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [
-    'https://via.placeholder.com/800x400?text=Image+1',
-    'https://via.placeholder.com/800x400?text=Image+2',
-    'https://via.placeholder.com/800x400?text=Image+3'
-  ];
+  const items = ['Carousel Item 1', 'Carousel Item 2', 'Carousel Item 3'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +21,7 @@ const Carousel = () => {
       >
         {items.map((item, index) => (
           <div key={index} className="carousel-item">
-            <img src={item} alt={`Slide ${index + 1}`} />
+            {item}
           </div>
         ))}
       </div>
