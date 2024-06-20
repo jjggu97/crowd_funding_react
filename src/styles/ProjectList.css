@@ -12,102 +12,17 @@
   border-radius: 5px;
   width: calc(33% - 40px);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
 .project-card .project-image {
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-color: #EFEFD0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
-.loading-spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #004E89;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.project-details {
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-.project-details h2 {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-
-.project-details p {
-  font-size: 0.875rem;
-  margin: 10px 0;
-}
-
-.funding-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 10px;
-  margin-top: 10px;
-}
-
-.funding-bar {
-  background-color: #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  height: 10px;
-  width: 50%;
-  margin-right: 10px;
-}
-
-.funding-bar-inner {
-  background-color: #004E89;
-  height: 10px;
-  width: 0;
-}
-
-.funding-percentage {
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-}
-
-.bookmark-button {
-  background: none;
-  border: none;
-  color: #004E89;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.bookmark-button.bookmarked {
-  color: gold;
-}
-
-@media (max-width: 1200px) {
-  .project-card {
-    width: calc(33.33% - 20px);
-  }
+.project-card h2 {
+  margin-top: 0;
 }
 
 @media (max-width: 800px) {
