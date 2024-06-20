@@ -1,0 +1,79 @@
+.funding-page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .funding-page h1 {
+    font-family: NanumGothic;
+    margin-bottom: 20px;
+    color: darkblue;
+  }
+  
+  .funding-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .funding-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+  
+  .skeleton-image {
+    width: 100%;
+    height: 200px;
+    background-color: #EFEFD0;
+    margin-bottom: 20px;
+  }
+  
+
+  .skeleton-percentage {
+    width: 100%;
+    height: 50px;
+    background-color: #EFEFD0;
+    margin-top: 5px;
+    position: relative;
+  }
+  
+
+  
+  @keyframes skeleton-loading {
+    0% {
+      background-color: #f0f0f0;
+    }
+    100% {
+      background-color: #e0e0e0;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .funding-card {
+      width: calc(33.33% - 20px);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .funding-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .funding-card {
+      width: calc(100% - 20px);
+    }
+  }
+  
