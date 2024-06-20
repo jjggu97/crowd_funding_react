@@ -84,6 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   max-width: 1200px;
   margin: 0 auto;
   z-index: 1;
@@ -151,6 +152,22 @@
 
 .intromsg h2 {
   font-size: 2rem;
+=======
+  height: 100vh;
+  padding: 0 20px;
+  }
+  
+  .intromsg {
+  font-size: 25px;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  margin: -25px 0 0 -25px;
+  max-width: 50%;
+  }
+  
+  .intromsg h2 {
+>>>>>>> parent of 6dc7f96 (06/20)
   color: #004E89;
 }
 
