@@ -22,7 +22,8 @@
     display: block;
     margin-bottom: 4px;
   }
-  
+
+
   .account-page .form-group input[type="text"],
   .account-page .form-group input[type="password"],
   .account-page .form-group input[type="email"],
@@ -85,4 +86,3 @@
   .account-page .form-group .terms button:hover {
     text-decoration: underline;
   }
-  

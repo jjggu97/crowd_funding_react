@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage';
 import AccountPage from './pages/AccountPage';
 import AccountFind from './pages/AccountFind';
 import Welcome from './pages/Welcome';
+import ProjectPage from './pages/ProjectPage';
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
             <Route path="/account-find" element={<AccountFind />} />
             <Route path="/signup" element={<AccountPage />} />
             <Route path="/welcome" element={<Welcome />} />
-
+            <Route path="/create" element={<ProjectPage />} />
           </Routes>
         </main>
       </div>

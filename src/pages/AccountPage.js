@@ -131,7 +131,7 @@ const AccountPage = () => {
             <input type="text" placeholder="상세 주소" />
           </div>
         </div>
-        <div className="form-group terms">
+        <div className="form-group terms"><label htmlFor="termsAgreed">다음과 같은 약관에 동의합니다.</label>
           <input
             type="checkbox"
             id="termsAgreed"
@@ -139,8 +139,6 @@ const AccountPage = () => {
             onChange={(e) => setTermsAgreed(e.target.checked)}
             required
           />
-          <label htmlFor="termsAgreed">다음과 같은 약관에 동의합니다.</label>
-          <button type="button">약관 보기</button>
         </div>
         <button type="submit">회원가입</button>
       </form>
