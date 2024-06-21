@@ -12,13 +12,14 @@ const AccountPage = () => {
   const [termsAgreed, setTermsAgreed] = useState(false);
 
   const calculatePasswordStrength = (password) => {
-    if (password.length === 0) return '안전도 표시';
+    if (password.length === 0) return '';
+
     if (/\d/.test(password) && /[a-zA-Z]/.test(password) && /[^a-zA-Z0-9]/.test(password)) {
-      return '높음';
-    } else if (/\d/.test(password) || /[a-zA-Z]/.test(password)) {
-      return '보통';
-    } else {
-      return '낮음';
+      return '✅ 보안 높음';
+    } else if (/\d/.test(password) && /[a-zA-Z]/.test(password)) {
+      return '🟡 보안 보통';
+    } else if (/\d/.test(password) || /[a-zA-Z]/.test(password) || /[^a-zA-Z0-9]/.test(password)) {
+      return '❗ 보안 낮음';
     }
   };
 
@@ -28,6 +29,7 @@ const AccountPage = () => {
       alert('약관에 동의해주세요.');
       return;
     }
+
     console.log('회원가입 정보:', {
       name,
       username,
@@ -36,7 +38,12 @@ const AccountPage = () => {
       phone,
       address,
     });
-    // 회원가입 성공 후 다음 페이지로 넘어가는 로직을 추가할 수 있습니다.
+
+    if (name && username && password && confirmPassword && email && phone && address && termsAgreed) {
+      window.location.href = '/welcome'; 
+    } else {
+      alert('모든 항목을 채워주세요.');
+    }
   };
 
   return (
@@ -62,8 +69,8 @@ const AccountPage = () => {
             onChange={(e) => setUsername(e.target.value)}
             required
           />
-          <button type="button">중복확인</button>
           <small>최소 4자 이상 12자 이하로 입력 가능합니다.</small>
+          <button type="button">중복확인</button>
         </div>
         <div className="form-group">
           <label htmlFor="password">비밀번호</label>
@@ -97,7 +104,6 @@ const AccountPage = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <small>예: example@example.com</small>
         </div>
         <div className="form-group">
           <label htmlFor="phone">전화번호</label>
@@ -108,7 +114,7 @@ const AccountPage = () => {
             onChange={(e) => setPhone(e.target.value)}
             required
           />
-          <small> - 없이 입력해주세요.</small>
+          <small>- 없이 입력해주세요.</small>
         </div>
         <div className="form-group">
           <label htmlFor="address">주소</label>
@@ -119,10 +125,10 @@ const AccountPage = () => {
             onChange={(e) => setAddress(e.target.value)}
             required
           />
-          <button type="button">주소검색</button>
+          <button type="button">주소 검색</button>
           <div>
-            <input type="text" placeholder="기본주소" />
-            <input type="text" placeholder="상세주소" />
+            <input type="text" placeholder="기본 주소" />
+            <input type="text" placeholder="상세 주소" />
           </div>
         </div>
         <div className="form-group terms">
@@ -133,8 +139,8 @@ const AccountPage = () => {
             onChange={(e) => setTermsAgreed(e.target.checked)}
             required
           />
-          <label htmlFor="termsAgreed">약관동의</label>
-          <button type="button">약관보기</button>
+          <label htmlFor="termsAgreed">다음과 같은 약관에 동의합니다.</label>
+          <button type="button">약관 보기</button>
         </div>
         <button type="submit">회원가입</button>
       </form>
