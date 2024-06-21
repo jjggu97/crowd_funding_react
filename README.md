@@ -2,7 +2,7 @@
 
 This repository contains simple crowd funding website prototype, named "Tomato" 
 
-[>>Run Build<<]([jjggu97.github.io])
+[>>Run Build<<]([jjggu97.github.io/])
 
 ## Development Environment
 
