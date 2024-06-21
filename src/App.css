@@ -1,21 +1,115 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+body.loading * {
+  pointer-events: none;
+}
+
+body.loading main {
+  filter: blur(5px);
+  transition: filter 0.5s ease-in-out;
+}
+
+body.loading::after {
+  content: 'Loading...';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+body.loading .header,
+body.loading .footer {
+  filter: blur(5px);
+}
+
+.header {
+  font-family: NanumGothic;
+  background-color: tomato;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header .logo {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.header .search {
+  font-family: NanumGothic;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.header .search:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 801px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+  .header .logo {
+    margin-bottom: 0;
   }
-  
-  main {
-    flex: 1;
-    padding: 20px;
+
+  .search-container {
+    margin: 0 20px;
   }
-  
-  h1, h2 {
-    color: #333;
+
+  .nav-left {
+    margin-top: 0;
   }
-  
+
+  .header .search {
+    width: 300px;
+  }
+}

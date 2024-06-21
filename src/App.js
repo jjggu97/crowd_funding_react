@@ -1,12 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation, Link } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import IntroPage from './pages/IntroPage';
 import FundingPage from './pages/FundingPage';
 import './App.css';
-
 
 const App = () => {
   return (
@@ -17,10 +15,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<IntroPage />} />
             <Route path="/main" element={<HomePage />} />
-            <Route path="/funding" element={<FundingPage />}/>
+            <Route path="/funding" element={<FundingPage />} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );

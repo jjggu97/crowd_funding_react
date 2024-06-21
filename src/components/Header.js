@@ -4,13 +4,13 @@ import '../styles/Header.css';
 
 const Header = () => {
   const randomMessages = [
-    '찾으시는 프로젝트가 있나요?', '새로운 일상을 검색해보세요!', '어떤 사람들의 이야기를 들어볼까요?', '관심 있으신 정보를 찾아드릴게요!'
+    '무작위 제품 어때요?', '요즘 인기 제품 검색!', '새로운 제품을 찾아보세요!', '추천 제품을 확인해보세요!'
   ];
 
   const recentSearches = ['최근 검색어 1', '최근 검색어 2', '최근 검색어 3'];
   const recommendedSearches = ['추천 검색어 1', '추천 검색어 2', '추천 검색어 3'];
 
-  const [searchPlaceholder,setSearchPlaceholder] = useState(randomMessages[Math.floor(Math.random() * randomMessages.length)]);
+  const [searchPlaceholder, setSearchPlaceholder] = useState(randomMessages[Math.floor(Math.random() * randomMessages.length)]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   return (
