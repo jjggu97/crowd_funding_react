@@ -14,7 +14,7 @@ const FundingPage = () => {
             <div className="skeleton-text"></div>
             <div className="skeleton-text short"></div>
             <div className="skeleton-percentage">
-              <div className="skeleton-bar"></div>
+            <div className="skeleton-bar"></div>
             </div>
           </div>
         ))}
