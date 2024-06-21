@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Carousel.css';
+import img1 from '../img/box_wadiz.jpg'
+import img2 from '../img/line_wadiz.jpg'
+import img3 from '../img/tech_wadiz.png'
+
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [
-    '1','2','3'
-  ];
+  const items = [img1,img2,img3];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [items.length]);

@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import IntroPage from './pages/IntroPage';
 import FundingPage from './pages/FundingPage';
 import './App.css';
+import RecentPage from './pages/RecentPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/" element={<IntroPage />} />
             <Route path="/main" element={<HomePage />} />
             <Route path="/funding" element={<FundingPage />} />
+            <Route path='/new' element={<RecentPage />}/>
           </Routes>
         </main>
       </div>

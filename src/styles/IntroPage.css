@@ -36,7 +36,7 @@
     width: 20px;
     height: 20px;
     background: rgba(247,171,241,0.2);
-    animation: animate 10s linear infinite;
+    animation: animate 7s linear infinite;
 }
 
 .background li:nth-child(1) {
